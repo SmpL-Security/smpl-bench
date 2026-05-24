@@ -1,0 +1,712 @@
+{
+  "projects": [
+    {
+      "slug": "DSpace__DSpace_CVE-2022-31192_5.10",
+      "cve_id": "CVE-2022-31192",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "DSpace__DSpace_CVE-2022-31194_5.10",
+      "cve_id": "CVE-2022-31194",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "DSpace__DSpace_CVE-2022-31195_5.10",
+      "cve_id": "CVE-2022-31195",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "ESAPI__esapi-java-legacy_CVE-2022-23457_2.2.3.1",
+      "cve_id": "CVE-2022-23457",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "ESAPI__esapi-java-legacy_CVE-2022-24891_2.2.3.1",
+      "cve_id": "CVE-2022-24891",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "Graylog2__graylog2-server_CVE-2023-41044_5.1.2",
+      "cve_id": "CVE-2023-41044",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "OWASP__json-sanitizer_CVE-2020-13973_1.2.0",
+      "cve_id": "CVE-2020-13973",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "SpringSource__spring-security-oauth_CVE-2018-1260_2.3.2.RELEASE",
+      "cve_id": "CVE-2018-1260",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "alibaba__nacos_CVE-2021-44667_2.0.3",
+      "cve_id": "CVE-2021-44667",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "alibaba__one-java-agent_CVE-2022-25842_0.0.1",
+      "cve_id": "CVE-2022-25842",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__activemq_CVE-2019-0222_5.15.8",
+      "cve_id": "CVE-2019-0222",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__activemq_CVE-2020-11998_5.15.12",
+      "cve_id": "CVE-2020-11998",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__axis-axis1-java_CVE-2023-51441_1.3.0",
+      "cve_id": "CVE-2023-51441",
+      "cwe_id": "CWE-918",
+      "query": "cwe-918wLLM"
+    },
+    {
+      "slug": "apache__dolphinscheduler_CVE-2022-26884_2.0.5",
+      "cve_id": "CVE-2022-26884",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__dolphinscheduler_CVE-2022-34662_2.0.9",
+      "cve_id": "CVE-2022-34662",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__dolphinscheduler_CVE-2023-49109_3.2.0",
+      "cve_id": "CVE-2023-49109",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__dolphinscheduler_CVE-2023-51770_3.2.0",
+      "cve_id": "CVE-2023-51770",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__dubbo_CVE-2021-30180_2.7.9",
+      "cve_id": "CVE-2021-30180",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__flink_CVE-2020-17519_1.11.2",
+      "cve_id": "CVE-2020-17519",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__incubator-dubbo_CVE-2021-30181_2.6.8",
+      "cve_id": "CVE-2021-30181",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__jspwiki_CVE-2019-0225_2.11.0.M2",
+      "cve_id": "CVE-2019-0225",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__jspwiki_CVE-2019-10076_2.11.0.M3",
+      "cve_id": "CVE-2019-10076",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "apache__jspwiki_CVE-2019-10077_2.11.0.M3",
+      "cve_id": "CVE-2019-10077",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "apache__jspwiki_CVE-2019-10078_2.11.0.M3",
+      "cve_id": "CVE-2019-10078",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "apache__jspwiki_CVE-2019-10089_2.11.0.M4",
+      "cve_id": "CVE-2019-10089",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "apache__jspwiki_CVE-2022-46907_2.11.3",
+      "cve_id": "CVE-2022-46907",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "apache__kafka_CVE-2025-27818_3.9.0",
+      "cve_id": "CVE-2025-27818",
+      "cwe_id": "CWE-502",
+      "query": "cwe-502wLLM"
+    },
+    {
+      "slug": "apache__kylin_CVE-2024-48944_5.0.0",
+      "cve_id": "CVE-2024-48944",
+      "cwe_id": "CWE-918",
+      "query": "cwe-918wLLM"
+    },
+    {
+      "slug": "apache__mina-sshd_CVE-2023-35887_2.9.2",
+      "cve_id": "CVE-2023-35887",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__myfaces_CVE-2011-4367_2.0.11",
+      "cve_id": "CVE-2011-4367",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__nifi_CVE-2022-33140_1.16.2",
+      "cve_id": "CVE-2022-33140",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "apache__rocketmq_CVE-2019-17572_4.6.0",
+      "cve_id": "CVE-2019-17572",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__rocketmq_CVE-2023-33246_5.1.0",
+      "cve_id": "CVE-2023-33246",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__rocketmq_CVE-2023-37582_4.9.6",
+      "cve_id": "CVE-2023-37582",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__shiro_CVE-2023-34478_1.11.0",
+      "cve_id": "CVE-2023-34478",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__shiro_CVE-2023-46749_1.12.0",
+      "cve_id": "CVE-2023-46749",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__sling-org-apache-sling-servlets-resolver_CVE-2024-23673_2.10.0",
+      "cve_id": "CVE-2024-23673",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__sling-org-apache-sling-xss_CVE-2016-5394_1.0.8",
+      "cve_id": "CVE-2016-5394",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "apache__struts_CVE-2020-17530_2.5.25",
+      "cve_id": "CVE-2020-17530",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "apache__tika_CVE-2018-11762_1.18",
+      "cve_id": "CVE-2018-11762",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "apache__uima-uimaj_CVE-2022-32287_3.3.0",
+      "cve_id": "CVE-2022-32287",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "asf__commons-io_CVE-2021-29425_2.6",
+      "cve_id": "CVE-2021-29425",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "asf__commons-text_CVE-2022-42889_1.9",
+      "cve_id": "CVE-2022-42889",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "asf__cxf_CVE-2016-6812_3.0.11",
+      "cve_id": "CVE-2016-6812",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "asf__cxf_CVE-2019-17573_3.2.11",
+      "cve_id": "CVE-2019-17573",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "asf__james-project_CVE-2022-22931_3.6.0",
+      "cve_id": "CVE-2022-22931",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "asf__karaf_CVE-2022-22932_4.3.5",
+      "cve_id": "CVE-2022-22932",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "asf__nifi_CVE-2023-34468_1.21.0",
+      "cve_id": "CVE-2023-34468",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "asf__nifi_CVE-2023-36542_1.22.0",
+      "cve_id": "CVE-2023-36542",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "asf__tapestry-5_CVE-2019-0207_5.4.4",
+      "cve_id": "CVE-2019-0207",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "aws__aws-sdk-java_CVE-2022-31159_1.12.260",
+      "cve_id": "CVE-2022-31159",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "codecentric__spring-boot-admin_CVE-2022-46166_2.6.9",
+      "cve_id": "CVE-2022-46166",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "codehaus-plexus__plexus-archiver_CVE-2018-1002200_3.5",
+      "cve_id": "CVE-2018-1002200",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "codehaus-plexus__plexus-archiver_CVE-2023-37460_4.7.1",
+      "cve_id": "CVE-2023-37460",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "codehaus-plexus__plexus-utils_CVE-2017-1000487_3.0.15",
+      "cve_id": "CVE-2017-1000487",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "codehaus-plexus__plexus-utils_CVE-2022-4244_3.0.23",
+      "cve_id": "CVE-2022-4244",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "diffplug__goomph_CVE-2022-26049_3.37.1",
+      "cve_id": "CVE-2022-26049",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "dromara__hutool_CVE-2018-17297_4.1.11",
+      "cve_id": "CVE-2018-17297",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "eclipse-ee4j__glassfish_CVE-2022-2712_6.2.5",
+      "cve_id": "CVE-2022-2712",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "eclipse__hawkbit_CVE-2020-27219_0.3.0M6",
+      "cve_id": "CVE-2020-27219",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "fabric8io__kubernetes-client_CVE-2021-4178_5.0.2",
+      "cve_id": "CVE-2021-4178",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "ff4j__ff4j_CVE-2022-44262_1.8.13",
+      "cve_id": "CVE-2022-44262",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "folio-org__spring-module-core_CVE-2022-4963_2.0.0",
+      "cve_id": "CVE-2022-4963",
+      "cwe_id": "CWE-089",
+      "query": "cwe-089wLLM"
+    },
+    {
+      "slug": "hapifhir__org.hl7.fhir.core_CVE-2023-24057_5.6.91",
+      "cve_id": "CVE-2023-24057",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "hapifhir__org.hl7.fhir.core_CVE-2023-28465_5.6.105",
+      "cve_id": "CVE-2023-28465",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "hibernate__hibernate-validator_CVE-2019-10219_6.0.17.Final",
+      "cve_id": "CVE-2019-10219",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "jeecgboot__jeecgboot_CVE-2022-45206_3.4.3",
+      "cve_id": "CVE-2022-45206",
+      "cwe_id": "CWE-089",
+      "query": "cwe-089wLLM"
+    },
+    {
+      "slug": "jenkinsci__docker-commons-plugin_CVE-2022-20617_1.17",
+      "cve_id": "CVE-2022-20617",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "jenkinsci__git-client-plugin_CVE-2019-10392_2.8.4",
+      "cve_id": "CVE-2019-10392",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "jenkinsci__perfecto-plugin_CVE-2020-2261_1.17",
+      "cve_id": "CVE-2020-2261",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "jenkinsci__script-security-plugin_CVE-2023-24422_1228.vd93135a_2fb_25",
+      "cve_id": "CVE-2023-24422",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "jenkinsci__workflow-cps-global-lib-plugin_CVE-2022-25174_544.vff04fa68714d",
+      "cve_id": "CVE-2022-25174",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "jenkinsci__workflow-cps-plugin_CVE-2022-25173_2646.v6ed3b5b01ff1",
+      "cve_id": "CVE-2022-25173",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "jenkinsci__workflow-multibranch-plugin_CVE-2022-25175_706.vd43c65dec013",
+      "cve_id": "CVE-2022-25175",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "jeremylong__DependencyCheck_CVE-2018-12036_3.1.2",
+      "cve_id": "CVE-2018-12036",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "jlangch__venice_CVE-2022-36007_1.10.16",
+      "cve_id": "CVE-2022-36007",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "jmrozanec__cron-utils_CVE-2021-41269_9.1.5",
+      "cve_id": "CVE-2021-41269",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "joniles__mpxj_CVE-2020-35460_8.3.4",
+      "cve_id": "CVE-2020-35460",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "jstachio__jstachio_CVE-2023-33962_1.0.0",
+      "cve_id": "CVE-2023-33962",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "keycloak__keycloak_CVE-2014-3656_1.0.5.Final",
+      "cve_id": "CVE-2014-3656",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "keycloak__keycloak_CVE-2022-1274_20.0.4",
+      "cve_id": "CVE-2022-1274",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "keycloak__keycloak_CVE-2022-3782_20.0.1",
+      "cve_id": "CVE-2022-3782",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "keycloak__keycloak_CVE-2022-4361_21.1.1",
+      "cve_id": "CVE-2022-4361",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "kubernetes-client__java_CVE-2020-8570_client-java-parent-9.0.1",
+      "cve_id": "CVE-2020-8570",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "nahsra__antisamy_CVE-2016-10006_1.5.3",
+      "cve_id": "CVE-2016-10006",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "nahsra__antisamy_CVE-2017-14735_1.5.6",
+      "cve_id": "CVE-2017-14735",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "nahsra__antisamy_CVE-2022-28367_1.6.5",
+      "cve_id": "CVE-2022-28367",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "nahsra__antisamy_CVE-2022-29577_1.6.6.1",
+      "cve_id": "CVE-2022-29577",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "payara__Payara_CVE-2022-37422_5.2022.2",
+      "cve_id": "CVE-2022-37422",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "perwendel__spark_CVE-2016-9177_2.5.1",
+      "cve_id": "CVE-2016-9177",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "perwendel__spark_CVE-2018-9159_2.7.1",
+      "cve_id": "CVE-2018-9159",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "rhuss__jolokia_CVE-2018-1000129_1.4.0",
+      "cve_id": "CVE-2018-1000129",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "spring-cloud__spring-cloud-config_CVE-2020-5405_2.1.6.RELEASE",
+      "cve_id": "CVE-2020-5405",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "spring-cloud__spring-cloud-config_CVE-2020-5410_2.1.8.RELEASE",
+      "cve_id": "CVE-2020-5410",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "spring-cloud__spring-cloud-gateway_CVE-2022-22947_3.0.6",
+      "cve_id": "CVE-2022-22947",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "spring-projects__spring-framework_CVE-2022-22965_5.2.19.RELEASE",
+      "cve_id": "CVE-2022-22965",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "spring-projects__spring-security_CVE-2011-2732_2.0.6.RELEASE",
+      "cve_id": "CVE-2011-2732",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "square__retrofit_CVE-2018-1000850_2.4.0",
+      "cve_id": "CVE-2018-1000850",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "srikanth-lingala__zip4j_CVE-2018-1002202_1.3.2",
+      "cve_id": "CVE-2018-1002202",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "undertow-io__undertow_CVE-2014-7816_1.0.16.Final",
+      "cve_id": "CVE-2014-7816",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "vert-x3__vertx-web_CVE-2018-12542_3.5.3.CR1",
+      "cve_id": "CVE-2018-12542",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "vert-x3__vertx-web_CVE-2019-17640_3.9.3",
+      "cve_id": "CVE-2019-17640",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "whitesource__curekit_CVE-2022-23082_1.1.3",
+      "cve_id": "CVE-2022-23082",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "wildfly__wildfly_CVE-2018-1047_11.0.0.Final",
+      "cve_id": "CVE-2018-1047",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "x-stream__xstream_CVE-2013-7285_1.4.6",
+      "cve_id": "CVE-2013-7285",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "x-stream__xstream_CVE-2020-26217_1.4.14-java7",
+      "cve_id": "CVE-2020-26217",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "x-stream__xstream_CVE-2021-21345_1.4.15",
+      "cve_id": "CVE-2021-21345",
+      "cwe_id": "CWE-078",
+      "query": "cwe-078wLLM"
+    },
+    {
+      "slug": "xerial__sqlite-jdbc_CVE-2023-32697_3.41.2.1",
+      "cve_id": "CVE-2023-32697",
+      "cwe_id": "CWE-094",
+      "query": "cwe-094wLLM"
+    },
+    {
+      "slug": "xuxueli__xxl-job_CVE-2020-29204_2.2.0",
+      "cve_id": "CVE-2020-29204",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "xwiki__xwiki-commons_CVE-2022-24897_12.6.6",
+      "cve_id": "CVE-2022-24897",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "xwiki__xwiki-commons_CVE-2023-29201_14.6",
+      "cve_id": "CVE-2023-29201",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "xwiki__xwiki-commons_CVE-2023-29528_14.9-rc-1",
+      "cve_id": "CVE-2023-29528",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "xwiki__xwiki-commons_CVE-2023-31126_14.10.3",
+      "cve_id": "CVE-2023-31126",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "xwiki__xwiki-commons_CVE-2023-36471_14.10.5",
+      "cve_id": "CVE-2023-36471",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "xwiki__xwiki-rendering_CVE-2023-37908_14.10.3",
+      "cve_id": "CVE-2023-37908",
+      "cwe_id": "CWE-079",
+      "query": "cwe-079wLLM"
+    },
+    {
+      "slug": "yamcs__yamcs_CVE-2023-45277_5.8.6",
+      "cve_id": "CVE-2023-45277",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "yamcs__yamcs_CVE-2023-45278_5.8.6",
+      "cve_id": "CVE-2023-45278",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    },
+    {
+      "slug": "zeroturnaround__zt-zip_CVE-2018-1002201_1.12",
+      "cve_id": "CVE-2018-1002201",
+      "cwe_id": "CWE-022",
+      "query": "cwe-022wLLM"
+    }
+  ]
+}
