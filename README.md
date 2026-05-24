@@ -13,10 +13,11 @@ Benchmark runner suite for the [SmpL Security](https://github.com/SmpL-Security)
 5. [Configuration](#configuration)
 6. [Running Benchmarks](#running-benchmarks)
 7. [Understanding Results](#understanding-results)
-8. [The Two-Phase Pipeline (Claude)](#the-two-phase-pipeline-claude)
-9. [Docker Images](#docker-images)
-10. [Troubleshooting](#troubleshooting)
-11. [Project Manifest](#project-manifest)
+8. [Example Output — Project 1: DSpace CVE-2022-31192](#example-output--project-1-dspace-cve-2022-31192)
+9. [The Two-Phase Pipeline (Claude)](#the-two-phase-pipeline-claude)
+10. [Docker Images](#docker-images)
+11. [Troubleshooting](#troubleshooting)
+12. [Project Manifest](#project-manifest)
 
 ---
 
@@ -417,6 +418,193 @@ These JSON files are produced by the IRIS framework. Their internal schema is de
 A **passed** result means the IRIS framework completed all 8 stages without a non-zero exit code for that CVE. Whether the engine's verdict was correct (true positive vs false positive/negative) is determined by comparing IRIS's stage 8 posthoc verdict against the ground-truth label in the CWE-Bench-Java dataset — that comparison lives in the IRIS evaluation layer, not in smpl-bench itself.
 
 A **failed** result indicates an infrastructure error (Docker issue, timeout, CodeQL failure, API error) rather than necessarily a wrong vulnerability verdict.
+
+---
+
+## Example Output — Project 1: DSpace CVE-2022-31192
+
+This section shows real output from running the Claude benchmark against the first project in the manifest: **DSpace 5.10, CVE-2022-31192** (CWE-079 Cross-site Scripting). Use it as a reference for what each artifact looks like before you run the full suite yourself.
+
+### The vulnerability
+
+CVE-2022-31192 is a **stored XSS** in the DSpace JSPUI "Request a Copy" feature. Values submitted through the request form are stored without HTML-escaping and later reflected into the JSPUI response without sanitisation, allowing an attacker to inject arbitrary script content. It affects DSpace 5.x < 5.11 and 6.x < 6.4. CVSS 3.1 score: **HIGH** (`AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L`).
+
+The manifest entry for this project:
+
+```json
+{
+  "slug":   "DSpace__DSpace_CVE-2022-31192_5.10",
+  "cve_id": "CVE-2022-31192",
+  "cwe_id": "CWE-079",
+  "query":  "cwe-079wLLM"
+}
+```
+
+### Run command
+
+```bash
+python run_benchmark_claude.py \
+  --manifest cwe_bench_manifest.json \
+  --include CVE-2022-31192 \
+  --verbose
+```
+
+### Stage-by-stage log
+
+The Claude runner emits timestamped `[INFO]` lines as it progresses through each IRIS stage. Below is the condensed output from a completed run (stages 1–4 hit the on-disk cache from a prior run; stages 5–8 ran fresh):
+
+```
+[INFO] Processing DSpace__DSpace_CVE-2022-31192_5.10 (Query: cwe-079wLLM, Trial: benchmark-claude-docker)...
+[INFO] ==> Stage 1: Collecting external APIs...
+[INFO]   ==> Existing external APIs file found. Skipping running CodeQL...
+[INFO]   ==> Existing candidate APIs file found. Skipping filtering candidates...
+[INFO] ==> Stage 2: Collecting internal function parameters...
+[INFO]   ==> Existing function parameter file found. Skipping running CodeQL...
+[INFO]   ==> Existing source function parameter candidates file found. Skipping filtering candidates...
+[INFO] ==> Stage 3: Querying GPT for source/taint-prop/sink APIs...
+[INFO]   ==> Existing labelled source/taint-prop/sink APIs found. Skipping querying GPT...
+[INFO] ==> Stage 4: Querying GPT for source function parameters...
+[INFO]   ==> Found labelled source function parameters. Skipping...
+[INFO] ==> Stage 5: Building project specific query...
+[INFO]   ==> Building source query...
+[INFO]   ==> Building taint-propagator query...
+[INFO]   ==> Building sink query...
+[INFO]   ==> Building extension yml...
+[INFO] ==> Stage 6: Finding vulnerabilities with CodeQL...
+[INFO]   ==> Found existing cwe-079wLLM results; skipping...
+[INFO] ==> Stage 7: Post-processing CWE query results...
+[INFO]   ==> Original #alarms: 850; Original #paths: 2475
+[INFO]   ==> New #alarms: 806; New #paths: 2475
+[INFO] ==> Stage 8: Querying GPT for posthoc filtering...
+[INFO]   >>>Using Claude CLI (claude -p --model sonnet) — routes through Claude Code infrastructure
+[INFO] ==> Stage 9: Evaluating results...
+[INFO]   ==> [Recall@Method] RESULT: True, #Paths: 2360, #TP Paths: 4   ← vanilla (post stage 6)
+[INFO]   ==> [Recall@Method] RESULT: False, #Paths: 0, #TP Paths: 0    ← after posthoc filter
+[INFO]   ==> Dumping final statistics to cwe-079wLLM-final/results.json...
+```
+
+Stage 8 runs Claude Sonnet via CLI mode and takes approximately 15 minutes for this project.
+
+### Detection results (`cwe-079wLLM-final/results.json`)
+
+This file is written by the IRIS framework at the end of every run to `<output_dir>/<slug>/benchmark-claude-docker/cwe-079wLLM-final/results.json`.
+
+```json
+{
+  "statistics": {
+    "num_external_api_calls": 124835,
+    "num_api_candidates": 3649,
+    "num_labelled_sources": 441,
+    "num_labelled_taint_propagators": 340,
+    "num_labelled_sinks": 190,
+    "num_public_func_candidates": 0,
+    "num_labelled_func_param_sources": 0,
+    "num_gpt_calls_for_posthoc_filtering": 0,
+    "num_cached_during_posthoc_filtering": 0
+  },
+  "vanilla_result": {
+    "num_results": 717,
+    "num_paths": 2079,
+    "recall_file": true,
+    "num_tp_paths_file": 10,
+    "num_tp_results_file": 3,
+    "recall_method": true,
+    "num_tp_paths_method": 4,
+    "num_tp_results_method": 1
+  },
+  "posthoc_filter_result": {
+    "num_results": 717,
+    "num_paths": 56,
+    "recall_file": false,
+    "num_tp_paths_file": 0,
+    "num_tp_results_file": 0,
+    "recall_method": false,
+    "num_tp_paths_method": 0,
+    "num_tp_results_method": 0
+  }
+}
+```
+
+### Posthoc filter stats (`cwe-079wLLM-posthoc-filter/stats.json`)
+
+```json
+{
+  "num_gpt_calls": 358,
+  "num_cached": 664,
+  "num_failure": 215,
+  "num_vulnerable_paths": 56
+}
+```
+
+### Representative taint-flow path
+
+The posthoc filter evaluated 2,178 candidate paths. Below is one representative path (result 187, flow 1) showing user-controlled HTTP request parameters flowing through `RequestInfo` into `PackageParameters` without sanitisation:
+
+```
+Step 1  dspace-jspui/.../RequestInfo.java:112
+        get(...) : Object
+        ↑ HTTP request parameter map read
+
+Step 2  dspace-jspui/.../RequestInfo.java:112
+        (...)... : String[]
+        ← cast to String array
+
+Step 3  dspace-api/.../PackageParameters.java:60
+        getParameterValues(...) : String[]
+        ← taint flows into package parameter store
+
+Step 4  dspace-api/.../PackageParameters.java:78
+        ...[...] : String
+        ← individual parameter value extracted
+
+Step 5  dspace-api/.../PackageParameters.java:78
+        sb [post update] : StringBuffer
+        ← unsanitised value appended to output buffer
+
+Step 6  dspace-api/.../PackageParameters.java:80
+        sb : StringBuffer
+        ← buffer reference propagated
+
+Step 7  dspace-api/.../PackageParameters.java:80
+        toString(...)
+        ← buffer serialised to string — potential XSS output
+```
+
+Each path entry in the posthoc `results.json` follows this structure:
+
+```json
+{
+  "result_id": 187,
+  "code_flow_id": 1,
+  "entry": {
+    "path": [
+      {
+        "file_url": "dspace-jspui/src/main/java/org/dspace/app/webui/util/RequestInfo.java",
+        "start_line": 112,
+        "start_column": 9,
+        "end_line": 112,
+        "end_column": 30,
+        "message": "get(...) : Object"
+      },
+      "..."
+    ]
+  }
+}
+```
+
+### Interpreting these results
+
+| Metric | Value | Meaning |
+|--------|-------|---------|
+| `num_external_api_calls` | 124,835 | CodeQL enumerated 124,835 distinct API signatures across the project |
+| `num_api_candidates` | 3,649 | LLM labeling filtered these to 3,649 candidates for source/sink/taint-prop classification |
+| `num_labelled_sources` | 441 | Haiku labeled 441 APIs as potential XSS taint sources |
+| `num_labelled_sinks` | 190 | Haiku labeled 190 APIs as potential XSS output sinks |
+| `vanilla_result.recall_method` | `true` | CodeQL + LLM labeling **did** produce taint paths through the actual vulnerable method (4 true-positive paths across 1 alarm) |
+| `posthoc_filter_result.recall_method` | `false` | Claude Sonnet's posthoc filter retained 56 paths but pruned all 4 true-positive paths — a **false negative** at the posthoc stage |
+| `num_gpt_calls` (posthoc) | 358 | Sonnet evaluated 358 path groups (664 hits from cache; 215 paths errored or timed out) |
+
+**Summary:** The IRIS pipeline correctly identified the vulnerable method during CodeQL analysis (vanilla recall = true), but the Sonnet posthoc filter over-pruned and eliminated the true positive paths (posthoc recall = false). This is a known challenge in multi-stage LLM filtering pipelines — improving posthoc precision without sacrificing recall is an active area of work for the IRIS engine.
 
 ---
 
